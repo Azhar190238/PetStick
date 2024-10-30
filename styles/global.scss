@@ -62,7 +62,40 @@
     border-radius: 8px !important;
   }
 }
+.features {
+  /* Center the pagination in the middle */
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    position: relative; /* Removes position conflicts */
+    width: 100%;
+  }
 
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: #D9D9D9;
+    border-radius: 100%;
+    opacity: 1; /* Ensures bullets are fully visible */
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 40px !important;
+    height: 15px !important;
+    background: #FF6F3F; /* Keep active color consistent */
+    border-radius: 8px !important;
+  }
+}
+
+.bg-container {
+  background-image: url('/home1/looking/bg.svg');
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the background image */
+  position: relative;
+  z-index: 20;
+}
 
 
 /* ShopPeat.css */

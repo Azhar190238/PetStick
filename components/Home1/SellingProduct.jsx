@@ -1,6 +1,7 @@
 import React from 'react';
 import HeadingMiddle from '../Common/HeadingMiddle';
 import SellingCard from '../Common/SellingCard';
+import Image from 'next/image';
 
 
 const sellingData = [
@@ -41,22 +42,30 @@ const sellingData = [
 
 const SellingProduct = () => {
     return (
-        <div className='my-[120px] max-w-[1320px] mx-auto'>
-            <HeadingMiddle heading='Our Best Selling Product' />
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-10'>
-                {sellingData.map((item) => (
-                    <SellingCard
-                        key={item._id}
-                        image={item.image}
-                        heading={item.heading}
-                        rating={item.rating}
-                        name={item.name}
-                        price={item.price}
-                    />
-                ))}
-            </div>
-            <div className='flex justify-center'>
-                <button className='pet-button '>See More </button>
+        <div className='overflow-hidden'>
+            <div className='my-[120px] max-w-[1320px] mx-auto'>
+                <div className='ml-auto flex justify-end -mt-32 -mb-36  -mr-72'>
+                    <Image width={200} height={200} alt='design' src='/home1/Explore/dr.svg'></Image>
+                </div>
+                <HeadingMiddle heading='Our Best Selling Product' />
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-10'>
+                    {sellingData.map((item) => (
+                        <SellingCard
+                            key={item._id}
+                            image={item.image}
+                            heading={item.heading}
+                            rating={item.rating}
+                            name={item.name}
+                            price={item.price}
+                        />
+                    ))}
+                </div>
+                <div className='-mt-72 -ml-72'>
+                    <Image width={200} height={200} alt='design' src='/home1/Explore/dl.svg'></Image>
+                </div>
+                <div className='flex justify-center'>
+                    <button className='pet-button '>See More </button>
+                </div>
             </div>
         </div>
     );

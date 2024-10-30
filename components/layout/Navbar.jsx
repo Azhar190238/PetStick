@@ -1,4 +1,4 @@
-"use client"; // Marking this component as a client component
+"use client"; 
 
 import { useState, useEffect } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -150,7 +150,7 @@ const Navbar = () => {
         ));
 
     return (
-        <nav className="w-full h-fit relative z-50 py-4 bg-[#FFE6E4]">
+        <nav className="w-full h-fit relative z-50 py-4">
             <div className="max-w-[1320px] px-2 md:px-0 mx-auto flex items-center justify-between">
                 <Link href="/">
                     <div className='md:w-[160px] md:h-[35px] w-[100px] h-[28px]'>

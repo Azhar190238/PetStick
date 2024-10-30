@@ -1,13 +1,13 @@
+"use client";
 import Image from 'next/image';
-import HeadingLeft from '../Common/HeadingLeft'; // adjust path if needed
-
+import HeadingLeft from '../Common/HeadingLeft'; 
 
 const ShopPeat = () => {
     const petData = [
         {
             id: 1,
             name: 'dog',
-            imgSrc: '/home1/shopPeat/1.png', // Adjust the path based on where your images are stored
+            imgSrc: '/home1/shopPeat/1.png', 
         },
         {
             id: 2,

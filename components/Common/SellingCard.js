@@ -15,10 +15,10 @@ const SellingCard = ({ image, heading, rating, name, price }) => {
                     <h1 className='font-lora text-lg font-semibold text-textMain group-hover:text-primary capitalize '>
                         {heading}
                     </h1>
-                    <p className='-mt-6'>
+                    <div className=' flex '>
                         <Rate disabled defaultValue={1} count={1} /> 
-                        <span className='ml-2 text-primary font-sans text-lg font-medium'>{rating}</span>
-                    </p>
+                        <p className='ml-2 -mt-1 text-primary font-sans text-lg font-medium'>{rating}</p>
+                    </div>
                 </div>
                 <div className='flex justify-between items-center'>
                     <p className='capitalize font-lora text-[16px] text-textBody font-medium mt-2'>

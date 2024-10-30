@@ -38,7 +38,7 @@ const ShopPeat = () => {
 
     ];
     return (
-        <div className="max-w-[1320px] mx-auto mt-28">
+        <div className="max-w-[1320px] mx-auto mt-28 overflow-hidden">
             <HeadingLeft heading="Shop by Pet" />
             <div className='flex justify-end relative -mt-28 -mr-48'>                                
                  <Image

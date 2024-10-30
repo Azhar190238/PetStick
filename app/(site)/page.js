@@ -3,19 +3,25 @@ import TransformContent from "@/components/Common/TransformContent";
 import HeadingLeft from "@/components/Common/HeadingLeft";
 import ShopPeat from "@/components/Home1/ShopPeat";
 import FeaturesCategories from "@/components/Home1/FeaturesCategories";
+import Review from "@/components/Home1/Review";
+import Team from "@/components/Home1/Team";
+import Health from "@/components/Home1/Health";
+import ExploreBreads from "@/components/Home1/ExploreBreads";
+import SellingProduct from "@/components/Home1/SellingProduct";
 const heading = ''
 const description = ""
 export default function Home({ }) {
   return (
     <div className="">
-        <FeaturesCategories/>
-           <ShopPeat/>
-          <TransformContent bg='/home1/bg.svg' heading='Transform a Life: The Power of Pet Adoption' description= "Pet adoption provides a loving home to an animal in need, offering both companionship and fulfillment while helping to reduce shelter overcrowding. It's a meaningful way to make a positive impact."/> 
-           <Post/>
-           
-            <h1>Azharuddin</h1>
-            <h1>Azharuddin</h1>
-
+      <FeaturesCategories />
+      <SellingProduct/>
+      <ExploreBreads/>
+      <ShopPeat />
+      <Health />
+      <Team />
+      <Review />
+      <TransformContent bg='/home1/bg.svg' heading='Transform a Life: The Power of Pet Adoption' description="Pet adoption provides a loving home to an animal in need, offering both companionship and fulfillment while helping to reduce shelter overcrowding. It's a meaningful way to make a positive impact." />
+      <Post />
     </div>
   );
 }

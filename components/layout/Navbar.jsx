@@ -14,12 +14,9 @@ const links = [
     {
         name: 'Home', path: '/',
         submenu: [
-            { name: 'Student', path: '/v3/student' },
-            { name: 'Civilian', path: '/v3/civilian' },
-            { name: 'Newcomers', path: '/v3/newComers' },
-            { name: 'Small Business', path: '/v3/business' },
-            { name: 'US Tax Filling', path: '/v3/usTax' },
-            { name: 'Military', path: '/v3/military' },
+            { name: 'Home 1', path: '/' },
+            { name: 'Home 2', path: '/home2' },
+            { name: 'Home 3', path: '/home3' },
         ]
     },
     { name: 'Pets', path: 'pets' },
@@ -45,11 +42,12 @@ const links = [
     },
 ];
 
-const Navbar = () => {
+const Navbar = ({ textColor }) => {
     const [activeLink, setActiveLink] = useState('');
     const [isOpen, setIsOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState('');
     const [dropdownTimeout, setDropdownTimeout] = useState(null);
+    const textColorClass = textColor === 'white' ? 'text-white' : 'text-black';
 
     const pathname = usePathname(); // Get the current path using usePathname
     const router = useRouter(); // Use router for navigation
@@ -99,7 +97,7 @@ const Navbar = () => {
             >
                 <div className="flex items-center">
                     <p
-                        className={`font-noto cursor-pointer text-[18px] font-medium ${activeLink === link.name ? 'text-primary ' : 'text-textBody'}`}
+                        className={`font-noto cursor-pointer text-[18px] font-medium ${activeLink === link.name ? 'text-primary ' : {textColorClass}}`}
                         onClick={() => !link.submenu && handleLinkClick(link.name, link.path)}
                     >
                         {link.name}
@@ -107,11 +105,12 @@ const Navbar = () => {
                     {link.submenu && (
                         <button onClick={() => toggleDropdown(link.name)}>
                             <RiArrowDropDownLine
-                                className={`text-textBody text-3xl ml-1 transition-transform duration-300 ${openDropdown === link.name ? 'rotate-180' : 'rotate-0'}`}
+                                className={`${textColorClass} text-3xl ml-1 transition-transform duration-300 ${openDropdown === link.name ? 'rotate-180' : 'rotate-0'}`}
                             />
                         </button>
                     )}
                 </div>
+
                 {/* Hover-based dropdown for large screens */}
                 {link.submenu && openDropdown === link.name && (
                     <div
@@ -131,6 +130,7 @@ const Navbar = () => {
                         ))}
                     </div>
                 )}
+
                 {/* Click-based dropdown for mobile screens */}
                 {link.submenu && openDropdown === link.name && isOpen && (
                     <div className="lg:hidden absolute left-4 bg-white text-black rounded-lg z-50">
@@ -182,15 +182,15 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                <div className="hidden lg:flex items-center text-[18px] font-medium text-textBody space-x-10 ">
+                <div className={`hidden lg:flex items-center text-[18px] font-medium ${textColorClass} space-x-10 `}>
                     {renderLinks()}
                 </div>
 
                 <div className="hidden lg:flex relative  justify-center lg:justify-end">
                     <div className='flex space-x-6 items-center mr-16'>
-                        <IoMdHeartEmpty className='text-2xl'/>
-                        <MdOutlineShoppingCart className='text-2xl' />
-                        <FaUserLarge className='text-2xl' />
+                        <IoMdHeartEmpty className={`text-2xl ${textColorClass}`}/>
+                        <MdOutlineShoppingCart className= {`text-2xl ${textColorClass}`} />
+                        <FaUserLarge className={`text-2xl ${textColorClass}`} />
                     </div>
                     <button className={` text-[#fff] text-lg bg-[#E65F33] px-5 py-3 sm:px-10 sm:py-[22px] rounded-full`}>
                         Become A Seller
@@ -199,7 +199,7 @@ const Navbar = () => {
             </div>
 
             {isOpen && (
-                <div className="lg:hidden agency rounded absolute top-16 right-0 w-1/3 z-50 flex flex-col text-[18px] font-medium px-4">
+                <div className={`lg:hidden agency rounded absolute top-16 right-0 w-1/3 z-50 flex flex-col text-[18px] font-medium px-4`}>
                     {renderLinks()}
                 </div>
             )}

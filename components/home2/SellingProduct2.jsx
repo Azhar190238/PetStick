@@ -1,15 +1,14 @@
 "use client";
 import React from 'react';
-import HeadingMiddle from '../Common/HeadingMiddle';
 import Image from 'next/image';
+import HeadingLeft from '../Common/HeadingLeft';
 import SellingCard2 from '../Common/SellingCard2';
-import SellingCard from '../Common/SellingCard';
-
 
 const sellingData = [
     {
         _id: '1',
-        image: '/home1/Explore/dog.svg',
+        image: '/home2/Selling/1.svg',
+        hoverImage: '/home2/Selling/2.svg',
         heading: 'Delicious Pizza',
         rating: 4.5,
         name: 'Pizza',
@@ -17,7 +16,8 @@ const sellingData = [
     },
     {
         _id: '2',
-        image: '/home1/Explore/dog.svg',
+        image: '/home2/Selling/1.svg',
+        hoverImage: '/home2/Selling/2.svg',
         heading: 'Juicy Burger',
         rating: 4.2,
         name: 'Burger',
@@ -25,7 +25,8 @@ const sellingData = [
     },
     {
         _id: '3',
-        image: '/home1/Explore/dog.svg',
+        image: '/home2/Selling/1.svg',
+        hoverImage: '/home2/Selling/2.svg',
         heading: 'Pasta Delight',
         rating: 4.7,
         name: 'Pasta',
@@ -33,7 +34,8 @@ const sellingData = [
     },
     {
         _id: '4',
-        image: '/home1/Explore/dog.svg',
+        image: '/home2/Selling/1.svg',
+        hoverImage: '/home2/Selling/2.svg',
         heading: 'Tasty Sushi',
         rating: 4.8,
         name: 'Sushi',
@@ -42,23 +44,24 @@ const sellingData = [
 
 ];
 
-const SellingProduct = () => {
+const SellingProduct2 = () => {
     return (
         <div className='overflow-hidden'>
             <div className='my-[120px] max-w-[1320px] mx-auto'>
                 <div className='ml-auto flex justify-end -mt-32 -mb-36  -mr-72'>
                     <Image width={200} height={200} alt='design' src='/home1/Explore/dr.svg'></Image>
                 </div>
-                <HeadingMiddle heading='Our Best Selling Product' />
+                <HeadingLeft heading='Our Best Selling Product' />
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-10'>
                     {sellingData.map((item) => (
-                        <SellingCard
+                        <SellingCard2
                             key={item._id}
                             image={item.image}
                             heading={item.heading}
                             rating={item.rating}
                             name={item.name}
                             price={item.price}
+                            hoverImage= {item.hoverImage}
                         />
                     ))}
                 </div>
@@ -73,4 +76,4 @@ const SellingProduct = () => {
     );
 };
 
-export default SellingProduct;
+export default SellingProduct2;

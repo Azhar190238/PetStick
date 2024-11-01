@@ -1,6 +1,5 @@
 import Post from "@/components/Home1/Post";
 import TransformContent from "@/components/Common/TransformContent";
-import HeadingLeft from "@/components/Common/HeadingLeft";
 import ShopPeat from "@/components/Home1/ShopPeat";
 import FeaturesCategories from "@/components/Home1/FeaturesCategories";
 import Review from "@/components/Home1/Review";

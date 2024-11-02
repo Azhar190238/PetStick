@@ -17,7 +17,7 @@ export default function Home2() {
       <Hero2 />
       <FeaturesCategories />
       <SellingProduct2 />
-      <LookingFor />
+      <LookingFor bgColor='#F8D9CC' />
       <ExploreBreads/>
       <ShopPeat />
       {/* <Health /> */}

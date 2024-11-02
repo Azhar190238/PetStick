@@ -47,7 +47,7 @@ export default function Hero2() {
         navigation={false}
         spaceBetween={50}
         slidesPerView={1}
-        className="w-full h-[900px] hero2"
+        className="w-full h-[120vh] hero2"
       >
         {slideData.map(({ _id, bgImage, heading, paragraph }) => (
           <SwiperSlide key={_id}>

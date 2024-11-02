@@ -3,7 +3,7 @@ import React from 'react';
 import HeadingMiddle from '../Common/HeadingMiddle';
 import Image from 'next/image';
 
-const LookingFor = () => {
+const LookingFor = ({bgColor}) => {
     const lookingForData = [
         {
             _id: '1',
@@ -31,7 +31,7 @@ const LookingFor = () => {
         }
     ];
     return (
-        <div className='bg-[#F8D9CC] py-14'>
+        <div className={`bg-[${bgColor}]  py-14`}>
             <div className='max-w-[1320px] mx-auto'>
                 <div className='max-w-[680px] mx-auto'>
                     <HeadingMiddle

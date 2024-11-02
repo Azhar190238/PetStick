@@ -40,29 +40,31 @@ const LatestPost = () => {
             <div className='mb-10'>
                 <HeadingMiddle heading='latest post & articles' />
             </div>
-            <Swiper
-                keyboard={{ enabled: true }}
-                breakpoints={{
-                    0: { slidesPerView: 1, spaceBetween: 24 },
-                    768: { slidesPerView: 2, spaceBetween: 24 },
-                    1024: { slidesPerView: 3, spaceBetween: 24 },
-                    1280: { slidesPerView: 3, spaceBetween: 24 },
-                }}
-                modules={[Keyboard, Navigation]}
-                ref={swiperRef}
-                className="mt-8 md:mt-10 lg:mt-12 xl:mt-14"
-            >
-                {postData.map((post, index) => (
-                    <SwiperSlide key={index}>
-                        <LatestCard
-                            image={post.image}
-                            heading={post.heading}
-                            date={post.date}
-                            time={post.time}
-                        />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+            <div>
+                <Swiper
+                    keyboard={{ enabled: true }}
+                    breakpoints={{
+                        0: { slidesPerView: 1, spaceBetween: 24 },
+                        768: { slidesPerView: 2, spaceBetween: 24 },
+                        1024: { slidesPerView: 3, spaceBetween: 24 },
+                        1280: { slidesPerView: 3, spaceBetween: 24 },
+                    }}
+                    modules={[Keyboard, Navigation]}
+                    ref={swiperRef}
+                    className="mt-8 md:mt-10 lg:mt-12 xl:mt-14 "
+                >
+                    {postData.map((post, index) => (
+                        <SwiperSlide key={index}>
+                            <LatestCard
+                                image={post.image}
+                                heading={post.heading}
+                                date={post.date}
+                                time={post.time}
+                            />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
             <div className='flex items-center justify-center mt-10 gap-5'>
                 <button onClick={Previous} className='swipper-button'><FaArrowLeft size={20} /></button>
                 <button onClick={Next} className='swipper-button'><FaArrowRight size={20} /></button>

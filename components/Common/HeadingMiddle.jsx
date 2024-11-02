@@ -1,5 +1,5 @@
+'use client';
 import React from 'react';
-
 const HeadingMiddle = ({heading , description }) => {
     return (
         <div className=''>

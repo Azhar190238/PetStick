@@ -1,5 +1,4 @@
 // app/layout.js
-
 import Footer from '@/components/layout/Footer';
 import '../styles/global.scss';
 import NavbarWrapper from '@/components/layout/NavbarWrapper';

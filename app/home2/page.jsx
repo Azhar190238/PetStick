@@ -1,7 +1,5 @@
-
+'use client';
 import TransformContent from "@/components/Common/TransformContent";
-import Team from "@/components/Home1/Team";
-import Health from "@/components/Home1/Health";
 import LatestPost from "@/components/home2/LatestPost";
 import Review2 from "@/components/home2/Review2";
 import ShopPeat from "@/components/home2/ShopPeat";

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import HeadingLeft from '../Common/HeadingLeft';
 import Image from 'next/image';

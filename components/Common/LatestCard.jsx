@@ -1,4 +1,4 @@
-// LatestCard.js
+'use client';
 import Image from 'next/image';
 import React from 'react';
 import { CiCalendar } from 'react-icons/ci';

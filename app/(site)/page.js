@@ -1,3 +1,4 @@
+'use client';
 import Post from "@/components/Home1/Post";
 import TransformContent from "@/components/Common/TransformContent";
 import ShopPeat from "@/components/Home1/ShopPeat";

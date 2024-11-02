@@ -1,5 +1,5 @@
+'use client';
 import React from 'react';
-
 const HeadingLeft = ({heading , description }) => {
     return (
         <div >

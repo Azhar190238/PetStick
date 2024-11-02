@@ -1,5 +1,4 @@
 "use client"; 
-
 import { useState, useEffect } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdCloseCircle, IoMdHeartEmpty } from 'react-icons/io';

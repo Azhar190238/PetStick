@@ -1,4 +1,3 @@
-
 "use client";
 import React from 'react';
 import Image from 'next/image';
@@ -9,7 +8,6 @@ import { GoHeart } from "react-icons/go";
 const SellingCard3 = ({ image, hoverImage, heading, rating, name, price }) => {
     return (
         <div className="relative p-4 border border-[#D9D9D9] rounded-[8px] group transition-all duration-300 hover:scale-105">
-            {/* Image with Hover Effect */}
             <div className="w-full lg:max-w-[284px] h-full lg:max-h-[300px] relative">
                 {/* Primary image */}
                 <Image
@@ -20,15 +18,11 @@ const SellingCard3 = ({ image, hoverImage, heading, rating, name, price }) => {
                     src={image}
                 />
 
-
-                {/* Icons appear on hover */}
                 <div className="absolute flex justify-center left-24  items-center bottom-6 flex-row space-x-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <HiOutlineShoppingCart className="bg-[#Fff] rounded-full p-2 text-4xl hover:bg-primary hover:text-[#fff] transition-colors duration-300" />
                     <GoHeart className="bg-[#Fff] rounded-full p-2 text-4xl hover:bg-primary hover:text-[#fff] transition-colors duration-300" />
                 </div>
             </div>
-
-            {/* Text content */}
             <div className="mt-4">
                 <div className="flex flex-col justify-between items-center">
                     <p className="capitalize font-lora text-[16px] text-textBody font-medium">
